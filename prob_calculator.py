@@ -1,6 +1,5 @@
 import copy
 import random
-# Consider using the modules imported above.
 
 class Hat:
 
@@ -30,12 +29,6 @@ def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
                 count -= 1
         count += 1
     return count/num_experiments
-
-
-
-
-
-
 
 
 hat = Hat(black=6, red=4, green=3)
