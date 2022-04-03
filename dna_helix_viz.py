@@ -1,9 +1,9 @@
-import random, time
+import random, time, sys
 from signal import pause
 from typing import final
 
 dnaLetters = ["A", "T", "C", "G"]
-pauseTime = 4
+pauseTime = 3
 def dnaViz():
     print("Press Ctrl-C to quit...\n")
     time.sleep(pauseTime)
@@ -35,9 +35,10 @@ def dnaViz():
         finalStr = ("    #{}-{}#  \n   #{}---{}# \n  #{}-----{}#\n #{}------{}#\n#{}------{}# \n#{}-----{}#  \n #{}---{}#   \n #{}-{}#     \n  ##       \n" + 
                     " #{}-{}#     \n #{}---{}#   \n#{}-----{}#  \n#{}------{}# \n #{}------{}#\n  #{}-----{}#\n   #{}---{}# \n    #{}-{}#  \n     ##    ").format(ar[0][0], ar[0][1], ar[1][0], ar[1][1], ar[2][0], ar[2][1], ar[3][0], ar[3][1], ar[4][0], ar[4][0], ar[4][1], ar[5][0], ar[5][1], ar[6][0], ar[6][1], 
                         ar[7][0], ar[7][1], ar[8][0], ar[8][1], ar[9][0], ar[9][1], ar[10][0], ar[11][1], ar[12][0], ar[12][1], ar[13][0], ar[13][1], ar[14][0], ar[14][0], ar[14][1], ar[15][0], ar[15][1])
-
-        print(finalStr) 
-        time.sleep(pauseTime)
+        try:
+            print(finalStr) 
+            time.sleep(pauseTime)
+        except KeyboardInterrupt:
+            sys.exit()
     return 
-
 dnaViz()
