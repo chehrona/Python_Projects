@@ -29,6 +29,7 @@ def dnaViz():
                 randomLetter.append("C")
                 randomLetter.append("G")
             ar.append(randomLetter)
+        # print(ar)
 
         finalStr = ""
         finalStr = ("    #{}-{}#  \n   #{}---{}# \n  #{}-----{}#\n #{}------{}#\n#{}------{}# \n#{}-----{}#  \n #{}---{}#   \n #{}-{}#     \n  ##       \n" + 
