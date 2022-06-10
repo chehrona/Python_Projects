@@ -33,9 +33,12 @@ dealerCardShape = random.choice(cardShapes)
 playerCardVal = random.choice(list(cardValues))
 playerValue += cardValues[playerCardVal]
 playerCardShape = random.choice(cardShapes)
-playerCard = f" ____ \n|{playerCardVal}  |\n|  {playerCardShape} |\n|__{playerCardVal}|"
+if playerCardVal == "10":
+    playerCard = f" ____ \n|{playerCardVal}  |\n|  {playerCardShape} |\n|__{playerCardVal}|"
+else:
+    playerCard = f" ____ \n|{playerCardVal}   |\n| {playerCardShape} |\n|\n___{playerCardVal}|\n"
 print(playerCard)
-actionQuestion = input("(H)it, (S)tand, (D)ouble down")
+actionQuestion = input("(H)it, (S)tand, (D)ouble down ")
 if actionQuestion == "H":
     dealerCardVal = random.choice(list(cardValues))
     dealerValue += cardValues[dealerCardVal]
