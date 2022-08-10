@@ -3,7 +3,6 @@ import random
 possibleList = ['r', 'p', 's']
 
 compChoice = random.choice(possibleList)
-print(compChoice)
 
 playerChoice = input("What is your pick? ")
 
