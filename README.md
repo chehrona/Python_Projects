@@ -1,4 +1,4 @@
-# Small projects built with Python
+# Small Python Projects
 
 Project sources: 
 * Scientific Computing with Python (certification from freeCodeCamp)
