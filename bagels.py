@@ -1,19 +1,21 @@
 import random
+
+guessNumberStr = ""
+
 def guess():
-    print("I am thinking of a 3-digit number. Try to guess what it is.\nHere are some clues:\nWhen I say:    This means:\n  Pico         One digit is correct but in the wrong position.\n  Fermi        One digit is correct and in the right position.\n  Bagels       No digit is correct.\nI have thought up a number.\nYou have 10 guesses to get it.")
+    print("\n**************************************************************\nI am thinking of a 3-digit number. Try to guess what it is.\n\nHere are some clues:\nWhen I say:    This means:\n\n  Pico         One digit is correct but in the wrong position.\n  Fermi        One digit is correct and in the right position.\n  Bagels       No digit is correct.\n\n\nI have thought up a number.\nYou have 10 guesses to get it.\n**************************************************************\n")
     randomNumberFinal = []
     i = 0
     while i < 3:
         i += 1
         randomGeneratedInt = random.randrange(0, 9)
-        randomGeneratedStr = str(randomGeneratedInt)
-        randomNumberFinal.append(randomGeneratedStr)
+        randomNumberFinal.append(str(randomGeneratedInt))
    
 
     for n in range(1, 11):
         print("Guess #{}".format(n))
-        guessNumberInt = input()
-        guessNumberStr = str(guessNumberInt)
+        guessNumberStr = input()
+
         joinedListRandom = ''.join(randomNumberFinal)
         if guessNumberStr == joinedListRandom:
             print("You got it!")
@@ -41,6 +43,8 @@ def guess():
     elif anotherRound == "no":
         print("Thanks for playing!")
     return 
+
+
 
 
 if __name__=="__main__":
